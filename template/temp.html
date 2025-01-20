@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .navbar {
+        position: fixed;
+        width: 100%;
+      }
+      .right {
+        display: flex;
+      }
+      .circle {
+        background-color: rgb(233, 233, 233);
+        margin-left: 1%;
+        width: 25px;
+        height: 25px;
+        border-radius: 50px;
+      }
+      .button {
+        margin-left: 47%;
+        background-color: rgb(233, 233, 233);
+        align-items: center;
+        justify-content: right;
+        display: flex;
+        width: 80px;
+        height: 30px;
+        border-radius: 50px;
+      }
+      .circle1 {
+        width: 25px;
+        height: 25px;
+        margin-right: 2px;
+        border-radius: 50px;
+        background-color: #ff5722;
+      }
+      .left {
+        background-color: white;
+        display: flex;
+        border-radius: 10px;
+        padding: 2px 25px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.107);
+        align-items: center;
+        margin: 30px 50px;
+        height: 95px;
+      }
+      .navopt {
+        display: inline-block;
+        padding: 15px;
+        transition-duration: 100ms;
+        border-radius: 10px;
+      }
+      .navopt:hover {
+        display: inline-block;
+        color: rgb(255, 255, 255);
+        background-color: #ff5722;
+        border-radius: 10px;
+        padding: 15px;
+        transition-duration: 100ms;
+      }
+      .navul {
+        display: flex;
+        gap: 5%;
+        transition-duration: 100ms;
+      }
+      .navul:hover {
+        transition-duration: 100ms;
+
+        display: flex;
+        gap: 5%;
+        color: gray;
+      }
+      .firstsec {
+        margin-top: 170px;
+        border-radius: 10px;
+        background-color: rgba(237, 237, 237, 0.681);
+        width: 100%;
+        height: 560px;
+      }
+      body {
+        font-family: Poppins, sans-serif, "FontAwesome", "Font Awesome 6 Free";
+
+        display: flex;
+        flex-direction: column;
+      }
+      .stimg {
+        width: 93%;
+        margin: 50px;
+      }
+      .firstsecdown {
+        display: flex;
+        gap: 30px;
+        margin-left: 50px;
+        margin-right: 50px;
+        align-items: center;
+      }
+      .circle2 {
+        width: 80px;
+        height: 80px;
+        background-color: black;
+        border-radius: 50px;
+        transition-duration: 100ms;
+      }
+      .circle2:hover {
+        width: 80px;
+        height: 80px;
+        background-color: #ff5722;
+        border-radius: 50px;
+        transition-duration: 100ms;
+      }
+      .playvid {
+        align-items: center;
+        display: flex;
+        width: 300px;
+        gap: 4px;
+      }
+      .card {
+        display: inline-block;
+        z-index: -1;
+        position: relative;
+        border-radius: 10px;
+        width: 450px;
+        height: 560px;
+        background-size: cover;
+        background-position: center;
+      }
+      .card > div {
+        background-color: rgba(0, 0, 0, 0.315);
+        height: 100%;
+        border-radius: 10px;
+        justify-content: center;
+      }
+      .card > div > div > p {
+        color: white;
+        font-size: 12px;
+        margin: 20px 20px;
+      }
+      .card > div > h1 {
+        color: white;
+        margin-top: 300px;
+        margin-left: 20px;
+      }
+      .card > div > p {
+        color: rgba(255, 255, 255, 0.782);
+        margin-left: 20px;
+        font-size: smaller;
+      }
+      .innerbox1 {
+        border-radius: 10px;
+        width: 70px;
+        height: 30px;
+        background-color: #ee2700;
+        margin-left: 20px;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .innerbox2 {
+        border-radius: 10px;
+        width: 70px;
+        height: 30px;
+        background-color: #27baea;
+        margin-left: 20px;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .innerbox3 {
+        border-radius: 10px;
+        width: 70px;
+        height: 30px;
+        background-color: #b0ea32;
+        margin-left: 20px;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .innerbox > h1 {
+        margin: 0px;
+      }
+      .secondsec {
+        margin-right: 50px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-top: 40px;
+      }
+      .thirdsec {
+        z-index: -3;
+        margin-top: 40px;
+        border-radius: 10px;
+        background-color: rgba(237, 237, 237, 0.681);
+        width: 100%;
+        height: 600px;
+      }
+      .thirdsec > h2 {
+        margin-left: 50px;
+        margin-top: 25px;
+      }
+      hr {
+        background-color: black;
+        margin-left: 50px;
+        margin-top: 40px;
+        margin-right: 50px;
+        height: 2px;
+        border: none;
+      }
+      .card2 {
+        background-color: #ffffff;
+        width: 450px;
+        height: 430px;
+        width: 330px;
+        border: 1px solid rgba(0, 0, 0, 0.134);
+        border-radius: 10px;
+        background-color: #ededed;
+      }
+      .img {
+        border-radius: 10px;
+        width: 330px;
+        height: 330px;
+        background-size: cover;
+        background-position: center;
+      }
+      .content > h4 {
+        margin-left: 20px;
+        font-size: 20px;
+        width: 170px;
+      }
+      .content > h3 {
+        font-size: 20px;
+      }
+      .thirddown {
+        display: flex;
+        margin-right: 50px;
+        margin-left: 50px;
+        justify-content: space-between;
+      }
+      .smallcircle {
+        width: 10px;
+        height: 10px;
+        background-color: #ff5722;
+        border-radius: 50px;
+      }
+      .smallcircle1 {
+        width: 10px;
+        height: 10px;
+        background-color: #cccccc;
+        border-radius: 50px;
+      }
+      .circles {
+        gap: 10px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .fourthsec {
+        display: flex;
+      }
+      .left1 {
+        padding: 30px 50px;
+        width: 20%;
+        height: 200px;
+        background-color: rgb(235, 235, 235);
+      }
+      .left1 > img {
+        width: 30%;
+      }
+      .left1 > p {
+        font-size: 18px;
+      }
+      .mid {
+        padding-right: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 60%;
+        height: 200px;
+        background-color: rgb(235, 235, 235);
+        display: flex;
+        justify-content: space-between;
+      }
+      .mid > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        list-style: none;
+      }
+      .right1 {
+        padding: 30px 50px;
+        width: 20%;
+        height: 200px;
+        background-color: rgb(235, 235, 235);
+      }
+      #login {
+        width: 60px;
+        display: inline-block;
+        padding: 15px;
+        transition-duration: 100ms;
+        border-radius: 10px;
+        color: #ff5722;
+      }
+      #login:hover {
+        display: inline-block;
+        color: rgb(255, 255, 255);
+        background-color: #ff5722;
+        border-radius: 10px;
+        padding: 15px;
+        transition-duration: 100ms;
+      }
+      h1{
+        margin-left: 50px;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        color: #ff5722;
+      }
+    </style>
+    <link rel="stylesheet" href="temp.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left">
+        <img width="50px" height="26px" src="logo-anly-black.png" alt="" />
+        <ul class="navul">
+          <li class="navopt"><strong>Demo</strong></li>
+          <li class="navopt"><strong>Shortcodes</strong></li>
+          <li class="navopt"><strong>Post</strong></li>
+          <li class="navopt"><strong>Page</strong></li>
+          <li class="navopt"><strong>Shop</strong></li>
+          <li>
+            <div style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" id="login"><strong>SignIn</strong></div>
+          </li>
+        </ul>
+        <div class="button">
+          <h4 style="margin-right: 5px"><strong>Dark</strong></h4>
+          <div class="circle1"></div>
+        </div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    
+    
+    <div class="firstsec">
+      <div id="firstsec1">
+        
+        <img class="stimg" src="anly-mag-orange-brand.png" alt="" />
+        <div class="firstsecdown">
+          <h3 style="width: 240px">
+            <strong>Saturday</strong><br /><strong>December 14, 2024</strong>
+          </h3>
+          <p style="display: inline-block; width: 270px">
+            730 avenue of the Sun Dominican Republic, SC 0398 RD
+          </p>
+          <div class="playvid">
+            <div class="circle2"></div>
+            <h4 style="display: inline-block"><strong></strong>Play Video</h4>
+          </div>
+          <img src="ads-banner-leaderboard.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="secondsec">
+      <div class="card" style="background-image: url('1fst\ card.jpg')">
+        <div>
+          <div>
+            <p style="display: inline-block">
+              By <strong>Farycreate</strong> --- January 10,2024
+            </p>
+          </div>
+          <div class="innerbox1">
+            <h4>Tech</h4>
+          </div>
+
+          <h1>How we can safely use applications to our advantage.</h1>
+          <p>Share A Post</p>
+        </div>
+      </div>
+      <div class="card" style="background-image: url('2ndimg.jpg')">
+        <div>
+          <div>
+            <p style="display: inline-block">
+              By <strong>Farycreate</strong> --- January 10,2024
+            </p>
+          </div>
+          <div class="innerbox2">
+            <h4>Tech</h4>
+          </div>
+
+          <h1>How we can safely use applications to our advantage.</h1>
+          <p>Share A Post</p>
+        </div>
+      </div>
+      <div class="card" style="background-image: url('3rdimg.jpg')">
+        <div>
+          <div>
+            <p style="display: inline-block">
+              By <strong>Farycreate</strong> --- January 10,2024
+            </p>
+          </div>
+          <div class="innerbox3">
+            <h4>Tech</h4>
+          </div>
+
+          <h1>How we can safely use applications to our advantage.</h1>
+          <p>Share A Post</p>
+        </div>
+      </div>
+    </div>
+    <div class="thirdsec">
+      <hr />
+      <h2>Fresh New Shirts</h2>
+      <div class="thirddown">
+        <div class="card2">
+          <div class="img" style="background-image: url('tshirt1.jpg')"></div>
+          <div class="content">
+            <h4>$45.00 Sweatershirt Red</h4>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="img" style="background-image: url('tshirt2.jpg')"></div>
+          <div class="content">
+            <h4>$45999999999.00 t-shirt yellow</h4>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="img" style="background-image: url('tshirt3.jpg')"></div>
+          <div class="content">
+            <h4>$400000099.00 shirt black</h4>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="img" style="background-image: url('tshirt4.jpg')"></div>
+          <div class="content">
+            <h4>$4500000.00 Beanie Black</h4>
+          </div>
+        </div>
+      </div>
+      <div class="circles">
+        <div class="smallcircle"></div>
+        <div class="smallcircle1"></div>
+        <div class="smallcircle1"></div>
+        <div class="smallcircle1"></div>
+        <div class="smallcircle1"></div>
+      </div>
+    </div>
+    <div class="fourthsec">
+      <div class="left1">
+        <img src="logo-anly-black.png" alt="" />
+        <p style="width: 270px">
+          We’re a group of creative nerds who enjoy doing something we love
+          every day.
+        </p>
+      </div>
+      <div class="mid">
+        <ul>
+          <li><strong style="font-size: 20px">Follow us</strong></li>
+          <li><strong>Instagram</strong></li>
+          <li><strong>Facebook</strong></li>
+          <li><strong>Twitter</strong></li>
+          <li><strong>Youtube</strong></li>
+        </ul>
+        <ul>
+          <li><strong style="font-size: 20px">Resources</strong></li>
+          <li><strong>Help</strong></li>
+          <li><strong>About</strong></li>
+          <li><strong>Support</strong></li>
+          <li><strong>Docs</strong></li>
+        </ul>
+        <ul>
+          <li><strong style="font-size: 20px">Help</strong></li>
+          <li><strong>FAQs</strong></li>
+          <li><strong>Delivery</strong></li>
+          <li><strong>Payments</strong></li>
+          <li><strong>Returns</strong></li>
+        </ul>
+      </div>
+      <div class="right1">
+        <h2>Sign up for the newsletter</h2>
+        <p>
+          I’m okay with getting emails and having that activity tracked to
+          improve my experience.
+        </p>
+        <h3>Subscribe Now</h3>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
